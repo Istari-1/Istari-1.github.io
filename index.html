@@ -223,20 +223,16 @@ body{
 <div class="project">
 
     <h3>Gmail Schedule Assistant</h3>
-
-    <p>
-        Google Apps Script と Gemini API を利用し、
-        Gmailから重要な予定情報を自動抽出。
-        Google Chatへの通知および
-        Google Calendarへの登録支援を行うシステムを開発。
-    </p>
-
-    <br>
-
-    <a href="https://github.com/Istari-1/Gmail-Schedule-assistant"
-       target="_blank" rel="noopener noreferrer">
-       View Project on GitHub →
-    </a>
+    <p class="project-meta">個人開発 · メールから予定の確認・登録までを支援</p>
+    <p>研究室から届く多くのメールの中で、重要な予定の確認とカレンダーへの転記に手間がかかるという課題から開発しました。Google Apps Script と Gemini API を組み合わせ、メール本文に埋もれた日程情報を整理し、Google Chat で確認できるようにしました。</p>
+    <ul class="contributions">
+        <li><strong>日程情報の構造化：</strong>イベント名、開始・終了日時、場所、会議情報、予約リンクを抽出。1通に含まれる複数の開催日程や、「いずれか1回参加」「全日程参加」といった参加条件も解析します。</li>
+        <li><strong>確認から行動までを支援：</strong>Google Chat に日程ごとのカードを通知。予約ページへの移動や、内容を確認して Google カレンダーに追加する操作につなげます。</li>
+        <li><strong>メール処理の分離：</strong>メインメール側で対象メールをラベル管理し、専用 Bot アカウントに転送。Bot 側で解析・通知・処理後のアーカイブを行う構成にしました。</li>
+        <li><strong>継続運用を意識した設計：</strong>過去日程の除外、処理ロックと転送済みラベルによる重複処理の抑制、API 混雑時の指数バックオフ、解析失敗時の通知・ラベル付けを実装しました。</li>
+    </ul>
+    <p class="project-meta"><strong>技術：</strong>JavaScript / Google Apps Script / Gemini API / Gmail / Google Chat Webhook / Google Calendar 登録リンク</p>
+    <a href="https://github.com/Istari-1/Gmail-Schedule-assistant" target="_blank" rel="noopener noreferrer">View Project on GitHub →</a>
 
 </div>
 
@@ -272,16 +268,10 @@ body{
 <br>
 
 <p>
-    また、生成AIにも強い関心を持っており、
-    個人開発にも取り組んでいます。
-    研究室では日々多くのメールが届き、
-    重要な予定情報の確認や管理に手間がかかるという課題がありました。
-    その課題を解決するために、
-    Google Apps ScriptとGemini APIを利用した
-    「Gmail Schedule Assistant」を開発しました。
-    メールから重要な予定情報を抽出し、
-    Google Chatへの通知とGoogle Calendarへの登録支援を行うことで、
-    実際の業務効率化に貢献しています。
+    また、身近な課題を見つけ、生成AIを活用した仕組みとして形にすることにも取り組んでいます。
+    個人開発の「Gmail Schedule Assistant」では、メールからの日程抽出だけでなく、
+    通知を受けて予約やカレンダー登録に進むまでの流れを設計しました。
+    APIエラー時の再試行や重複処理の抑制も実装し、継続して使う場面を意識した開発を心掛けています。
 </p>
 
 <br>
