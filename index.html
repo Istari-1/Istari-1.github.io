@@ -100,6 +100,18 @@ body{
     text-decoration:underline;
 }
 
+.profile-details{display:grid;grid-template-columns:5rem 1fr;gap:10px 20px;}
+.profile-details dt{font-weight:600;color:#555;}
+.profile-details dd{margin:0;overflow-wrap:anywhere;}
+.profile-details a{color:#2563eb;}
+.project-meta{color:#666;font-size:.92rem;margin:8px 0 14px;}
+.contributions{padding-left:1.4rem;margin:16px 0;}
+@media(max-width:600px){
+    .container{padding:24px 14px;}
+    .card{padding:24px 20px;}
+    .profile-details{grid-template-columns:1fr;gap:4px;}
+    .profile-details dd{margin-bottom:12px;}
+}
 .footer{
     text-align:center;
     color:#999;
@@ -117,7 +129,6 @@ body{
 
 <div class="card profile">
 
-```
 <img src="profile.jpg" alt="Profile Photo">
 
 <h1>王 逸天</h1>
@@ -131,10 +142,9 @@ body{
 </div>
 
 <div class="subtitle">
-    Graduate Student<br>
+    修士課程1年 在学中 / Master’s Student, Year 1<br>
     Hosei University
 </div>
-```
 
 </div>
 
@@ -148,10 +158,49 @@ body{
 <p>
     <strong>法政大学大学院</strong><br>
     理工学研究科 システム理工学専攻<br>
-    Graduate School of Science and Engineering
+    Graduate School of Science and Engineering<br>
+    修士課程1年 在学中
 </p>
 
 
+</div>
+
+<!-- Personal information -->
+<div class="card">
+<h2 class="section-title">Profile</h2>
+<dl class="profile-details">
+    <dt>氏名</dt><dd>王 逸天（オウ イッテン / WANG YITIAN）</dd>
+    <dt>所属</dt><dd>法政大学大学院 理工学研究科 システム理工学専攻</dd>
+    <dt>学年</dt><dd>修士課程1年 在学中</dd>
+    <dt>GitHub</dt><dd><a href="https://github.com/Istari-1" target="_blank" rel="noopener noreferrer">Istari-1</a></dd>
+</dl>
+</div>
+
+<!-- Language qualifications -->
+<div class="card">
+<h2 class="section-title">Languages &amp; Qualifications</h2>
+<dl class="profile-details">
+    <dt>英語</dt><dd>TOEFL 95点（2025年2月）</dd>
+    <dt>日本語</dt><dd>日本語能力試験（JLPT）N2 合格（2025年7月）</dd>
+</dl>
+</div>
+
+<!-- Internship contribution -->
+<div class="card">
+<h2 class="section-title">Internship &amp; Pull Request</h2>
+<div class="project">
+    <h3>リスク情報システムの深度調査レポート機能の改善</h3>
+    <p class="project-meta">交通銀行 東京支店 · 2026年7月のサマーインターンシップでの成果</p>
+    <p>インターンシップで取り組んだ開発成果として、リスク情報システム「risk-intel-system」に Pull Request を提出しました。調査資料の取り込みからレポート生成・管理までのワークフローを改善しました。</p>
+    <ul class="contributions">
+        <li>補足的なウェブ検索結果をレポート専用のデータソースとして保存し、生成に利用。</li>
+        <li>レポートごとにデータソースを分離し、新版の作成後も過去の資料と生成結果を保持。</li>
+        <li>PDF・PPTXなどの資料読み込みと、スキャンPDFのOCRに対応。</li>
+        <li>履歴レポートの名称変更・削除、作成日時の表示など、管理機能を改善。</li>
+    </ul>
+    <p class="project-meta">PR #1 · 2026年8月7日 マージ済み</p>
+    <a href="https://github.com/schwu06/risk-intel-system/pull/1" target="_blank" rel="noopener noreferrer">View Pull Request on GitHub →</a>
+</div>
 </div>
 
 <!-- Project -->
@@ -175,7 +224,7 @@ body{
     <br>
 
     <a href="https://github.com/Istari-1/Gmail-Schedule-assistant"
-       target="_blank">
+       target="_blank" rel="noopener noreferrer">
        View Project on GitHub →
     </a>
 
